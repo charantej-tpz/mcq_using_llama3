@@ -29,7 +29,9 @@ def handle_conversation():
         result =chain.invoke({'context': context, 'question': user_input})
         end_time = time.time()
         total_time = end_time - start_time
-        print(f"Bot {total_time} : ",result)
+        print("Bot  : ",result ,"\n")
+        print(f"Time taken : {total_time}")
+        print("\n")
         context+= f"\nUser: {user_input}\nAI: {result}"
 
 if __name__ == '__main__':
