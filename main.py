@@ -22,10 +22,10 @@ def handle_conversation():
     context = ''
     print("Welcome!!! Type 'exit' to quit.")
     while True:
-        start_time = time.time()
         user_input = input("You: ")
         if user_input == 'exit':
             break
+        start_time = time.time()
         result =chain.invoke({'context': context, 'question': user_input})
         end_time = time.time()
         total_time = end_time - start_time
